@@ -1,0 +1,201 @@
+algo = float(input("Inserta un número: "))
+resultado = algo ** 2.0
+print(algo, "al cuadrado es", resultado)
+------------------------------------------
+cateto_a = float(input("Inserta la longitud del primer cateto: "))
+cateto_b = float(input("Inserta la longitud del segundo cateto "))
+hipo = (cateto_a**2 + cateto_b**2) ** .5
+print("La longitud de la hipotenusa es: ", hipo)
+-------------------------------------
+cateto_a = float(input("Ingresa la longitud del primer cateto: "))
+cateto_b = float(input("Ingresa la longitud del segundo cateto: "))
+print("La longitud de la hipotenusa es: " + str((cateto_a**2 + cateto_b**2) ** .5))
+--------------------------------------------
+# ingresa un valor flotante para la variable a aquí
+a=float(input("ingresa 1er valor:"))
+# ingresa un valor flotante para la variable b aquí
+b=float(input("ingresa 2o valor:"))
+# muestra el resultado de la suma aquí
+print("el resultado suma es :" + str(a+b))
+# muestra el resultado de la resta aquí
+print("el reultado de resta es:" + str(a-b))
+# muestra el resultado de la multiplicación aquí
+print("el reultado de multiplicación es:" + str(a*b))
+# muestra el resultado de la división aquí
+print("el reultado de divisió es:" + str(a/b))
+print("\n¡Eso es todo, amigos!")
+----------------------------------------------
+
+x = float(input("Ingresa el valor para x: "))
+
+# coloca tu código aquí
+
+print("y =", y)
+----------------------------------------------
+hora = int(input("Hora de inicio (horas): "))
+min = int(input("Minuto de inicio (minutos): "))
+dura = int(input("Duración del evento (minutos): "))
+
+# coloca tu código aqui
+HORA=(hora+((min+dura)//60))%24
+MIN=((min+dura)%60)
+print(HORA,MIN,sep=":")
+
+---------------------------------------------
+x = int(input("Ingresa un número: ")) #  el usuario ingresa un 2
+print(x * "5")
+--------------------------------------------------
+#lee dos números
+numero1 = int (input("Ingresa el primer número:"))
+numero2 = int (input("Ingresa el segundo número:"))
+
+#elegir el número más grande
+if numero1> numero2:
+    nmasGrande = numero1
+else:
+    nmasGrande = numero2
+
+#imprimir el resultado
+print("El número más grande es:", nmasGrande)
+----------------------------------------------
+#lee tres números
+numero1 = int (input("Ingresa el primer número:"))
+numero2 = int (input("Ingresa el segundo número:"))
+numero3 = int (input("Ingresa el tercer número:"))
+
+#asumimos temporalmente que el primer número
+#es el más grande
+#lo verificaremos pronto
+nmasGrande = numero1
+
+#comprobamos si el segundo número es más grande que el mayor número actual
+#y actualiza el número más grande si es necesario
+if numero2 > nmasGrande:
+    nmasGrande = numero2
+
+#comprobamos si el tercer número es más grande que el mayor número actual
+#y actualiza el número más grande si es necesario
+if numero3 > nmasGrande:
+    nmasGrande = numero3
+
+#imprimir el resultado
+print("El número más grande es:", nmasGrande)
+---------------------------------------
+# lee tres números
+numero1 = int(input("Ingresa el primer número:"))
+numero2 = int(input("Ingresa el segundo número:"))
+numero3 = int(input("Ingresa el tercer número:"))
+---------------------------------------------------------
+
+# verifica cuál de los números es el mayor
+# y pásalo a la variable de mayor número
+
+numeroMayor = max(numero1,numero2,numero3)
+
+# imprimir el resultado
+print("El número más grande es:", numeroMayor) 
+------------------------------------------------
+nom =input("Ingresa el nombre de la planta: ")
+ 
+if nom == "Espatifilo":  #así comparo lo ingresado con lo que quiero
+	print("Si, ¡El Espatifilo es la mejor planta de todos los tiempos!")
+ 
+elif nom == "espatifilo":
+	print("No. ¡quiero un gran Espatifilo!")
+ 
+else:
+	print("¡Espatifilo! ¡No",nom,"!")
+----------------------------------------------------------
+ingreso=float(input("Ingrese el ingreso anual:"))
+ 
+# ingreso menor a 85528
+if ingreso < 85528:
+    impuesto=round(0.18*ingreso-556,0)
+    #El pais no entrega dinero a sus ciudadanos
+    if impuesto < 0:
+        print("No debe pagar impuestos: "+"0.0")
+    else:
+        print("Debe pagar1: ", impuesto)
+#Ingreso mayor a 85528
+elif ingreso >= 85528:
+    impuesto=round (14839 + 0.32*(ingreso-85528), 0)
+    print("Debe pagar2: ", impuesto)
+-------------------------------------------------------
+nP=0
+nI=0
+numero = int (input ("Introduce un numero o escribe 0 para detener:"))
+
+while numero!=0:
+    if numero % 2 == 1:
+        nI+=1
+    else:
+        nP+=1
+    numero = int (input ("Introduce un número o escriba 0 para detener:"))
+            
+print("numero impares ", nI)
+print("numeros pares", nP)
+---------------------------------
+pow = 1
+for exp in range(16):
+    pow *= 2
+    print ("2 a la potencia de", exp, "es", pow)
+-------------------------------------------------
+for i in range(2, 8, 3):
+    print("El valor de i es actualmente", i)
+-------------------------------------------------
+import time
+    # Escribe un ciclo for que cuente hasta cinco.
+for i in range(1,6):
+    print(i, "Misisipie")
+    # Cuerpo del ciclo: imprime el número de iteración del ciclo y la palabra "Mississippi".
+    # Cuerpo del ciclo - uso: time.sleep (1)
+
+# Escribe una función de impresión con el mensaje final.
+--------------------------------------------------------
+# break - ejemplo
+
+print("La instrucción de ruptura:")
+for i in range(1,6):
+    if i == 3:
+        break
+    print("Dentro del ciclo.", i)
+print("Fuera del ciclo.")
+
+# continua - ejemplo
+
+print("\nLa instrucción continue:")
+for i in range(1,6):
+    if i == 3:
+        continue
+    print("Dentro del ciclo.", i)
+print("Fuera del ciclo.")
+------------------------------------------
+numeroMayor = -99999999
+contador = 0
+
+while True:
+    numero = int (input ("Ingresa un número o escribe -1 para finalizar el programa:"))
+    if numero == -1:
+        break
+    contador = 1
+    if numero > numeroMayor:
+        numeroMayor = numero
+
+if contador != 0:
+    print("El número más grande es", numeroMayor)
+else:
+    print("No ha ingresado ningún número")
+---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
